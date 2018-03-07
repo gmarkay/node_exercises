@@ -11,9 +11,10 @@ function roll(dice) {
 
 
   const total = require('./math');
-  console.log(total.randomInt(countNum, sidesNum), 'now the thing');
 
-  return total;
+ const finalNum = total.randomInt(countNum, sidesNum);
+
+  return finalNum;
 
 }
 module.exports = { toDiceNotation, roll };
