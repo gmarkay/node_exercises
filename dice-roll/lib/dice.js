@@ -9,12 +9,12 @@ function roll(dice) {
   let countNum = +splitStrs[0];
   let sidesNum = +splitStrs[1];
 
+  let diceNum = 0;
+  const { randomInt } = require('./math');
+  for (let i = 0; i < countNum; i++) {
 
-  const total = require('./math');
-
- const finalNum = total.randomInt(countNum, sidesNum);
-
-  return finalNum;
-
+    diceNum += randomInt(1, sidesNum);
+  }
+  return diceNum;
 }
 module.exports = { toDiceNotation, roll };
