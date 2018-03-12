@@ -1,10 +1,9 @@
 #!/usr/bin/env node
 
 const fs = require('fs');
-const { URL } = require('url');
 
-let [,,...fileUrl] = process.argv;
+let [,,file] = process.argv;
 
-writeUrl = new URL(`file:${fileUrl}`);
+readFile = fs.readFileSync(file);
 
-process.stdout.write(`${fs.readFileSync(writeUrl)} \n`);
+process.stdout.write(readFile);
