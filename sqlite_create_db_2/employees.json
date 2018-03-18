@@ -1,8 +1,0 @@
-const employees = [
-  {id:1, firstName: `${faker.name.firstName()}`, lastName: `${faker.name.lastName()}`, jobTitle: `${faker.name.jobTitle()}`, address: `${faker.address.streetAddress()}`},
-  {id:2, firstName: `${faker.name.firstName()}`, lastName: `${faker.name.lastName()}`, jobTitle: `${faker.name.jobTitle()}`, address: `${faker.address.streetAddress()}`},
-  {id:3, firstName: `${faker.name.firstName()}`, lastName: `${faker.name.lastName()}`, jobTitle: `${faker.name.jobTitle()}`, address: `${faker.address.streetAddress()}`},
-  {id:4, firstName: `${faker.name.firstName()}`, lastName: `${faker.name.lastName()}`, jobTitle: `${faker.name.jobTitle()}`, address: `${faker.address.streetAddress()}`},
-  {id:5, firstName: `${faker.name.firstName()}`, lastName: `${faker.name.lastName()}`, jobTitle: `${faker.name.jobTitle()}`, address: `${faker.address.streetAddress()}`},
-  {id:6, firstName: `${faker.name.firstName()}`, lastName: `${faker.name.lastName()}`, jobTitle: `${faker.name.jobTitle()}`, address: `${faker.address.streetAddress()}`}
-];
