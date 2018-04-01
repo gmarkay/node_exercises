@@ -1,0 +1,21 @@
+{
+  "name": "prompt-training",
+  "version": "1.0.0",
+  "description": "",
+  "main": "build_db.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha -R list --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^5.0.5",
+    "prompt": "^1.0.0",
+    "sqlite3": "^4.0.0"
+  }
+}
