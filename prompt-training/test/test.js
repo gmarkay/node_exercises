@@ -1,0 +1,1 @@
+const {assert: {isFunction, equal, deepEqual}} = require('chai');
