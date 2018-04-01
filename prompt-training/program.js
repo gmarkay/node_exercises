@@ -22,9 +22,22 @@ module.exports.getOne = (id) => {
   });
 
 }
-module.exports.delete = () => {
 
+module.exports.create = (seats, instructor, start_date, end_date, category) => {
+  return new Promise((resolve, reject)=>{
+    db.run(`INSERT INTO programs VALUES(
+      null,
+      ${seats},
+      "${instructor}",
+      "${start_date}",
+      "${end_date}",
+      "${category}"
+    )`, function(err){
+      if(err) return reject(err)
+      resolve(this.lastID);
+    });
+  })
 }
-module.exports.create = () => {
+// module.exports.delete = () => {
 
-}
+// }
