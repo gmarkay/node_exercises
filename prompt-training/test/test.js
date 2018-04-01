@@ -1,8 +1,7 @@
-const { assert: { isFunction, equal, deepEqual, isArray } } = require('chai');
-// const { assert: { equal, isFunction, isObject, isArray } } = require("chai");
 
-let Program = require('../program.js');
-let programCtrl = require('../programCtrl.js');
+const { assert: { isFunction, equal, deepEqual, isObject, isArray } } = require('chai');
+
+let { getAll, getOne, create } = require('../program.js');
 
 let firstProgram = {
   program_id: 1,
@@ -24,23 +23,35 @@ let lastProgram = {
 
 describe('model functions', () => {
   it('all CRUDs should be functions', () => {
-    isFunction(Program.getAll);
-    isFunction(Program.getOne);
-    isFunction(Program.delete);
-    isFunction(Program.create);
+    isFunction(getAll);
+    isFunction(getOne);
+    // isFunction(delete);
+    isFunction(create);
   });
-  it('return of getAllshould be an array', () => {
-    return Program.getAll().then(programs => {
+  it('getAll should return an array', () => {
+    return getAll().then(programs => {
       isArray(programs);
     });
   });
 
-  it('first and last programs in program array should equal the correct object', () => {
-    return Program.getAll().then(programs => {
+  it('first and last programs in programs array should equal the correct object', () => {
+    return getAll().then(programs => {
       deepEqual(programs[0], firstProgram)
       deepEqual(programs[13], lastProgram)
     });
   });
+  it('getOne should return an object ', () => {
+    let testId = Math.floor(Math.random() * (14) + 1);
+    return getOne(testId).then(program => {
+      isObject(program);
+    });
+  });
+  it('getOne should return the correct program', () => {
+    return getOne(1).then(program => {
+      deepEqual(program, firstProgram)
+    })
+  });
+
 });
 
 
