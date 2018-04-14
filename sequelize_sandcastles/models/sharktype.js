@@ -6,7 +6,7 @@ module.exports = (sequelize, DataTypes) => {
   SharkType.associate = function (models) {
     // associations can be defined here
     SharkType.hasMany(models.Shark, {
-      foreignKey: 'shark_type_id'
+      foreignKey: 'sharkTypeId'
     })
 
   };
