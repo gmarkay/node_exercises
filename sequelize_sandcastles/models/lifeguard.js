@@ -7,7 +7,7 @@ module.exports = (sequelize, DataTypes) => {
   }, {});
   Lifeguard.associate = function(models) {
     Lifeguard.belongsTo(models.Beach, {
-      foreignKey: "beachId",
+      foreignKey: "beach_id",
       onDelete:"CASCADE"
     })
 

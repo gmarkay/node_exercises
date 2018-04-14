@@ -8,12 +8,9 @@ module.exports = (sequelize, DataTypes) => {
   }, {});
   Shark.associate = function(models) {
     Shark.belongsTo(models.Beach, {
-      foreignKey: "beachId",
+      foreignKey: "beach_id",
       onDelete:"CASCADE"
     });
-    Shark.hasOne(models.SharkType,{
-      foreignKey: "sharkTypeId"
-    })
   };
   return Shark;
 };

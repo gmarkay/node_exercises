@@ -2,13 +2,13 @@
 module.exports = (sequelize, DataTypes) => {
   var SharkType = sequelize.define('SharkType', {
     name: DataTypes.STRING,
-    }, {});
-  SharkType.associate = function(models) {
+  }, {});
+  SharkType.associate = function (models) {
     // associations can be defined here
-    SharkType.belongsTo(models.Shark, {
-      foreignKey:'sharkTypeId'
+    SharkType.hasMany(models.Shark, {
+      foreignKey: 'shark_type_id'
     })
 
   };
-  return SharkType;
+  return SharkType;z
 };
