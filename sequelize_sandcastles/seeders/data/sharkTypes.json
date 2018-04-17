@@ -1,0 +1,16 @@
+{
+  "sharkTypes":[
+    {
+      "name": "Great White"
+    },
+    {
+      "name": "Hammerhead"
+    },
+    {
+      "name": "Reef"
+    },
+    {
+      "name":"Lazer"
+    }
+  ]
+}

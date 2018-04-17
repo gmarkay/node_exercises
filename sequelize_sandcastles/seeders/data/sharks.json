@@ -1,0 +1,22 @@
+{
+  "sharks": [
+    {
+      "name": "Jaws",
+      "eats_humans": true,
+      "beachId": 1,
+      "sharkTypeId": 2
+    },
+    {
+      "name": "Jumbo Jimmy",
+      "eats_humans": false,
+      "beachId": 2,
+      "sharkTypeId": 2
+    },
+    {
+      "name": "Angela",
+      "eats_humans": true,
+      "beachId": 1,
+      "sharkTypeId": 4
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "beaches": [
+    {
+      "name": "super beach",
+      "location": "Kansas",
+      "sand_rating": 10
+    },
+    {
+      "name": "pretty good beach",
+      "location": "Wisconsin",
+      "sand_rating": 7
+    },
+    {
+      "name": "fine beach",
+      "location": "Siberia",
+      "sand_rating": 4
+    },{
+    "name": "pretty bad beach",
+    "location": "The Moon",
+    "sand_rating": 2
+    }
+  ]
+}
