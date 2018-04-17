@@ -7,8 +7,8 @@ module.exports = (sequelize, DataTypes) => {
   }, {});
   Beach.associate = (models) => {
     // associations can be defined here
-    Beach.hasMany(models.Lifeguard, {
-      foreignKey: 'beachId'
+    Beach.belongsToMany(models.Lifeguard, {
+      through: 'BeachGuard'
     });
     Beach.hasMany(models.Shark, {
       foreignKey: 'beachId'

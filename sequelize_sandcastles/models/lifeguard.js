@@ -4,10 +4,10 @@ module.exports = (sequelize, DataTypes) => {
     first_name: DataTypes.STRING,
     last_name: DataTypes.STRING,
   }, {});
-  Lifeguard.associate = function(models) {
-    Lifeguard.belongsTo(models.Beach, {
-      foreignKey: "beachId",
-      onDelete:"CASCADE"
+  Lifeguard.associate = function (models) {
+    Lifeguard.belongsToMany(models.Beach, {
+      as: 'beachGuard',
+      through: 'BeachGuard'
     })
 
   };

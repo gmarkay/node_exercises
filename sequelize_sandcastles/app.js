@@ -18,9 +18,8 @@ app.get('/beaches', (req, res, next) => {
 });
 app.get('/beaches/:id', (req, res, next) => {
   Beach.findOne({
-    raw: true,
     include: [{ model: Lifeguard, attributes: ["name"], model: Shark, attributes: ["name", "eats_humans"] }],
-    where: { id: req.params.id },
+    where: { id: req.params.id }
   })
     .then((beach) => {
       res.status(200).json(beach);
@@ -35,7 +34,6 @@ app.get('/lifeguards', (req, res, next) => {
 })
 app.get('/lifeguards/:id', (req, res, next) => {
   Lifeguard.findOne({
-    raw: true,
     where: { id: req.params.id },
     include: { model: Beach, attributes: ["name", "location"] }
   })
@@ -44,17 +42,15 @@ app.get('/lifeguards/:id', (req, res, next) => {
     });
 });
 
-app.post('/beaches', ({ body: { name, location, sand_rating } }, res, next) => {
-  Beach.create({name, location,sand_rating })
+app.post('/beaches', (req, res, next) => {
+  Beach.create(req.body)
     .then((newBeach) => {
-      console.log(newBeach.dataValues)
       res.status(201).json(newBeach);
     });
 });
-app.post('/lifeguards', ({ body: { first_name, last_name, beachId } }, res, next) => {
-  Lifeguard.create({ first_name, last_name, beachId})
+app.post('/lifeguards', (req, res, next) => {
+  Lifeguard.create(req.body)
     .then((newLG) => {
-      console.log(newLG.dataValues)
       res.status(201).json(newLG);
     });
 });
